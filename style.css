@@ -17,8 +17,8 @@ body {
 
 form {
     background-color: #1a212b;
-    width: 30%;
-    padding: 2rem;
+    width: 23%;
+    padding: 2.5rem;
     border-radius: 24px;
     margin-top: 12%;
 }
@@ -29,33 +29,42 @@ h1 {
 
 p {
     color: hsl(217, 12%, 63%);
+    font-size: 1rem;
 }
 
 input[type="radio"] {
     background-color: #272e38;
-    width: 50px;
-    height: 50px;
+    width: 52px;
+    height: 52px;
     -webkit-appearance: none;
     appearance: none;
     background-color: #262f38;
     border-radius: 50%;
     position: relative;
     counter-increment: radio;
+    transition: 0.125s ease-in;
 }
 
 input[type="radio"]::before {
+    color: hsl(217, 12%, 63%);
+    font-weight: 600;
+    font-size: 1rem;
     content: counter(radio);
     position: absolute;
     left: 40%;
-    top: 35%;
+    top: 33%;
+}
+
+input[type="radio"]:nth-child(1)::before {
+    left: 43%;
+}
+
+input[type="radio"]:hover {
+    background-color: #fb7413;
 }
 
 input[type="radio"]:checked {
     background-color: #ffffff;
-}
-
-input[type="radio"]:nth-child(1) {
-    content: '1';
 }
 
 object {
@@ -69,4 +78,27 @@ object::before {
     left: 0;
     top: 0;
     background-color: #262f38;
+}
+
+input[type="submit"] {
+    background-color: #fb7413;
+    border: none;
+    border-radius: 24px;
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1.5rem;
+    transition: 0.125s ease-in;
+}
+
+input[type="submit"]:hover {
+    background-color: #ffffff;
+}
+
+.radios {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
