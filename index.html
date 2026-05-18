@@ -18,48 +18,58 @@
 </head>
 <body>
 
-  <form action="#" class="rating">
+  <form action="#" id="rating" onsubmit="swap()">
+    
+      <!-- Rating state start -->
 
-    <!-- Rating state start -->
+      <div class="circle">
+        <img src="images/icon-star.svg" alt="Star icon" class="icon">
+      </div>
 
-    <object data="images/icon-star.svg" width="30" height="30"></object>
+      <h1>How did we do?</h1>
 
-    <h1>How did we do?</h1>
+      <p>
+        Please let us know how we did with your support request. All feedback is appreciated 
+        to help us improve our offering!
+      </p>
 
-    <p>
-      Please let us know how we did with your support request. All feedback is appreciated 
-      to help us improve our offering!
-    </p>
+      <div class="radios">
+        <input type="radio" name="rating" id="radio1" value="1">
+        <input type="radio" name="rating" id="radio2" value="2">
+        <input type="radio" name="rating" id="radio3" value="3">
+        <input type="radio" name="rating" id="radio4" value="4">
+        <input type="radio" name="rating" id="radio5" value="5">
+      </div>
 
-    <div class="radios">
-      <input type="radio" name="rating" id="radio1" value="1">
-      <input type="radio" name="rating" id="radio2" value="2">
-      <input type="radio" name="rating" id="radio3" value="3">
-      <input type="radio" name="rating" id="radio4" value="4">
-      <input type="radio" name="rating" id="radio5" value="5">
-    </div>
+      <input type="submit" value="Submit">
 
-    <input type="submit" value="Submit">
-
-    <!-- Rating state end -->
+      <!-- Rating state end -->
 
   </form>
 
-  <!-- Thank you state start -->
+  <form id="submitted">
 
-  You selected <!-- Add rating here --> out of 5
+    <!-- Thank you state start -->
 
-  Thank you!
+    <img src="images/illustration-thank-you.svg" alt="Star icon" class="phone">
 
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
+    <span>You selected <!-- Add rating here --> out of 5</span>
 
-  <!-- Thank you state end -->
+    <h1>Thank you!</h1>
+
+    <p>We appreciate you taking the time to give a rating. If you ever need more support, 
+    don’t hesitate to get in touch!</p>
+
+    <!-- Thank you state end -->
+
+  </form>
 
   
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/Rudytowcalenieja">Rudytowcalenieja</a>.
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

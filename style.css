@@ -25,11 +25,13 @@ form {
 
 h1 {
     color: hsl(0, 100%, 100%);
+    margin: 1rem 0;
 }
 
 p {
     color: hsl(217, 12%, 63%);
     font-size: 1rem;
+    line-height: 1.5rem;
 }
 
 input[type="radio"] {
@@ -67,17 +69,21 @@ input[type="radio"]:checked {
     background-color: #ffffff;
 }
 
-object {
-    position: relative;
+.circle {
+    background-color: #262f38;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
 }
 
-object::before {
-    content: '';
+.circle > object {
+    position: block;
     width: 30px;
     height: 30px;
-    left: 0;
-    top: 0;
-    background-color: #262f38;
 }
 
 input[type="submit"] {
@@ -101,4 +107,77 @@ input[type="submit"]:hover {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    margin: 1.5rem 0;
+}
+
+#submitted {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#submitted > h1, #submitted > span, #submitted > p {
+    text-align: center;
+}
+
+span {
+    background-color: #262f38;
+    color: #fb7413;
+    font-weight: 200;
+    width: 50%;
+    padding: 6px;
+    border-radius: 16px;
+    margin: 2rem 0;
+}
+
+.phone {
+    width: 200px;
+}
+
+@media screen and (max-width: 1200px) {
+    form {
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    form {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    form {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    form {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    form {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    input[type="radio"] {
+        width: 40px;
+        height: 40px;
+    }
+
+    input[type="radio"]::before {
+        left: 38%;
+        top: 28%;
+    }
+
+    .circle {
+        width: 40px;
+        height: 40px;
+    }
 }
