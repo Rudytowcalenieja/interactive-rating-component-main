@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 0.6875rem; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+  <form action="#" class="rating">
+
+    <!-- Rating state start -->
+
+    <object data="images/icon-star.svg" width="30" height="30"></object>
+
+    <h1>How did we do?</h1>
+
+    <p>
+      Please let us know how we did with your support request. All feedback is appreciated 
+      to help us improve our offering!
+    </p>
+
+    <div class="rating">
+      <input type="radio" name="rating" id="radio1" value="1">
+      <input type="radio" name="rating" id="radio2" value="2">
+      <input type="radio" name="rating" id="radio3" value="3">
+      <input type="radio" name="rating" id="radio4" value="4">
+      <input type="radio" name="rating" id="radio5" value="5">
+    </div>
+
+    <input type="submit" value="Submit">
+
+    <!-- Rating state end -->
+
+  </form>
+
+  <!-- Thank you state start -->
+
+  You selected <!-- Add rating here --> out of 5
+
+  Thank you!
+
+  We appreciate you taking the time to give a rating. If you ever need more support, 
+  don’t hesitate to get in touch!
+
+  <!-- Thank you state end -->
+
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/Rudytowcalenieja">Rudytowcalenieja</a>.
+  </footer>
+</body>
+</html>

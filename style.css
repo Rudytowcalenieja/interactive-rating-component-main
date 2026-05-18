@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Overpass", sans-serif;
+}
+
+body {
+    background-color: hsl(216, 12%, 8%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    background-color: #1a212b;
+    width: 30%;
+    padding: 2rem;
+    border-radius: 24px;
+    margin-top: 12%;
+}
+
+h1 {
+    color: hsl(0, 100%, 100%);
+}
+
+p {
+    color: hsl(217, 12%, 63%);
+}
+
+input[type="radio"] {
+    background-color: #272e38;
+    width: 50px;
+    height: 50px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #262f38;
+    border-radius: 50%;
+    position: relative;
+    counter-increment: radio;
+}
+
+input[type="radio"]::before {
+    content: counter(radio);
+    position: absolute;
+    left: 40%;
+    top: 35%;
+}
+
+input[type="radio"]:checked {
+    background-color: #ffffff;
+}
+
+input[type="radio"]:nth-child(1) {
+    content: '1';
+}
+
+object {
+    position: relative;
+}
+
+object::before {
+    content: '';
+    width: 30px;
+    height: 30px;
+    left: 0;
+    top: 0;
+    background-color: #262f38;
+}
